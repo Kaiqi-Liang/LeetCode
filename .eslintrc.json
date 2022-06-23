@@ -17,6 +17,7 @@
 	],
 	"rules": {
 		"eol-last": "error",
-		"semi": [2, "always"]
+		"semi": [2, "always"],
+		"no-var": "error"
 	}
 }
