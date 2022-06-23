@@ -1,5 +1,6 @@
 /**
  * https://leetcode.com/problems/is-subsequence/
+ * @date 2021-12-01
  */
 function isSubsequence(s: string, t: string): boolean {
     let i = 0;
