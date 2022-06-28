@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/coin-change/
+//! <https://leetcode.com/problems/coin-change/>
 use std::cmp;
 use std::convert::TryInto;
 pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {

@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/number-of-valid-words-in-a-sentence/
+//! <https://leetcode.com/problems/number-of-valid-words-in-a-sentence/>
 pub fn count_valid_words(sentence: String) -> i32 {
     sentence
         .split_whitespace()

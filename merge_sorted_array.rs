@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/merge-sorted-array/
+//! <https://leetcode.com/problems/merge-sorted-array/>
 use std::cmp;
 pub fn merge(nums1: &mut Vec<usize>, m: usize, nums2: &mut Vec<usize>, n: usize) {
     let mut copy = vec![];

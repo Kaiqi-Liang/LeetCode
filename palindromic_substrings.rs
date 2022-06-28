@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/palindromic-substrings/
+//! <https://leetcode.com/problems/palindromic-substrings/>
 use std::convert::TryInto;
 fn count_palindromes(s: &str, l: usize, r: usize) -> i32 {
     let mut count: i32 = 0;

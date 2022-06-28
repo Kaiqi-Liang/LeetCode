@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/maximum-product-subarray/
+//! <https://leetcode.com/problems/maximum-product-subarray/>
 pub fn max_sub_array(nums: Vec<i32>) -> i32 {
     let mut opt: Vec<Vec<i32>> = vec![vec![0; nums.len()]; nums.len()];
     for i in 0..nums.len() {

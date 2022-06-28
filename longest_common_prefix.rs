@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/longest-common-prefix/
+//! <https://leetcode.com/problems/longest-common-prefix/>
 pub fn longest_common_prefix(strs: Vec<String>) -> String {
     let len = strs.iter().map(|s| s.len()).min().unwrap();
     let mut res = String::new();

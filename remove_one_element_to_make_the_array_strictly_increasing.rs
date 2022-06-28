@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing/
+//! <https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing/>
 pub fn can_be_increasing(nums: Vec<i32>) -> bool {
     let mut remove = 0;
     for i in 1..nums.len() {

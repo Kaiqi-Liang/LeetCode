@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/container-with-most-water/
+//! <https://leetcode.com/problems/container-with-most-water/>
 use std::cmp;
 pub fn max_area(height: Vec<usize>) -> usize {
     let mut l = 0;

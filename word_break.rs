@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/word-break/
+//! <https://leetcode.com/problems/word-break/>
 pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
     let mut opt = vec![false; s.len() + 1];
     *opt.first_mut().unwrap() = true;

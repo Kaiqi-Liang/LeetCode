@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/maximum-subarray/
+//! <https://leetcode.com/problems/maximum-subarray/>
 use std::cmp;
 pub fn max_sub_array(nums: Vec<i32>) -> i32 {
     let mut opt = Vec::new();

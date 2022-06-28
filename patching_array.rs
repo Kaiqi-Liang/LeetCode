@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/patching-array/
+//! <https://leetcode.com/problems/patching-array/>
 pub fn min_patches(nums: Vec<i32>, n: i32) -> i32 {
     let n: i64 = n.into();
     let mut sum: i64 = 0;

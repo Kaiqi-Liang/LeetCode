@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/patching-array/
+//! <https://leetcode.com/problems/patching-array/>
 use std::collections::HashMap;
 fn find_duplicates(s: &str) -> Vec<char> {
     let mut map = HashMap::new();

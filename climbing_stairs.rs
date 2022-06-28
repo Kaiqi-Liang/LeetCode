@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/climbing-stairs/
+//! <https://leetcode.com/problems/climbing-stairs/>
 mod array {
     use std::convert::TryInto;
     pub fn climb_stairs(n: i32) -> i32 {
