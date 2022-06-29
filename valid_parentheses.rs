@@ -1,4 +1,4 @@
-//! <https://leetcode.com/problems/valid-parentheses>
+//! <https://leetcode.com/problems/valid-parentheses/>
 use std::collections::HashMap;
 pub fn is_valid(s: String) -> bool {
     let mut stack = Vec::<char>::new();
