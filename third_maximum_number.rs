@@ -1,4 +1,5 @@
 //! <https://leetcode.com/problems/third-maximum-number/>
+/// `O(nlogn)` time complexity
 mod sort {
     use std::collections::HashSet;
     pub fn third_max(nums: Vec<i32>) -> i32 {
@@ -12,6 +13,7 @@ mod sort {
     }
 }
 
+/// `O(n)` time complexity
 mod max {
     pub fn third_max(nums: Vec<i32>) -> i32 {
         let first = nums.iter().max().unwrap();

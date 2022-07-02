@@ -1,4 +1,5 @@
 //! <https://leetcode.com/problems/climbing-stairs/>
+/// `O(n)` space complexity
 mod array {
     use std::convert::TryInto;
     pub fn climb_stairs(n: i32) -> i32 {
@@ -11,6 +12,7 @@ mod array {
     }
 }
 
+/// `O(1)` space complexity
 mod variables {
     pub fn climb_stairs(n: i32) -> i32 {
         let (mut one, mut two) = (1, 1);
