@@ -1,4 +1,4 @@
-//! <https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/>
+//! <https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/>
 pub fn max_profit(prices: Vec<i32>) -> i32 {
     let mut total = 0;
     for (i, price) in prices.iter().enumerate().skip(1) {

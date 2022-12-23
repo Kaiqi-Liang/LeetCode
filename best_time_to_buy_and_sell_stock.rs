@@ -1,5 +1,4 @@
 //! <https://leetcode.com/problems/best-time-to-buy-and-sell-stock/>
-
 /// `O(n^2)` time complexity
 mod loop_max {
     pub fn max_profit(prices: Vec<i32>) -> i32 {
