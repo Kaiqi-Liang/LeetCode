@@ -3,9 +3,9 @@ pub fn is_long_pressed_name(name: String, typed: String) -> bool {
     let mut i = 0;
     let mut j = 0;
     'outer: while i < name.len() {
-        let ch = name.chars().nth(i).unwrap();
+        let ch = name.chars().nth(i).expect("i < name.len()");
         let mut repetition = 1;
-        while i < name.len() - 1 && ch == name.chars().nth(i + 1).unwrap() {
+        while i < name.len() - 1 && ch == name.chars().nth(i + 1).expect("i < name.len() - 1") {
             i += 1;
             repetition += 1;
         }

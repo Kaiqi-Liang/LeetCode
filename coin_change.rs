@@ -1,11 +1,10 @@
 //! <https://leetcode.com/problems/coin-change/>
 use std::cmp;
-use std::convert::TryInto;
 pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
-    let amount: usize = amount.try_into().unwrap();
+    let amount: usize = amount as _;
     let coins: Vec<usize> = coins
         .iter()
-        .map(|&coin| TryInto::<usize>::try_into(coin).unwrap())
+        .map(|&coin| coin as _)
         .collect();
     let mut opt = vec![vec![0; amount + 1]; coins.len() + 1];
     opt[0] = vec![usize::MAX; amount + 1];
@@ -27,7 +26,7 @@ pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
             );
         }
     }
-    opt[coins.len()][amount] as i32
+    opt[coins.len()][amount] as _
 }
 
 fn main() {

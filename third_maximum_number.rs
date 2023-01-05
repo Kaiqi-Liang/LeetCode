@@ -16,7 +16,7 @@ mod sort {
 /// `O(n)` time complexity
 mod max {
     pub fn third_max(nums: Vec<i32>) -> i32 {
-        let first = nums.iter().max().unwrap();
+        let first = nums.iter().max().expect("nums.len() >= 1");
         let nums = nums.iter().filter(|&num| num != first);
         match nums.clone().max() {
             Some(second) => match nums.filter(|&num| num != second).max() {

@@ -9,10 +9,11 @@ pub fn is_valid(s: String) -> bool {
                 stack.push(ch);
                 true
             }
-            ')' | ']' | '}' => match stack.pop() {
-                Some(parenthesis) => ch == *matching_parentheses.get(&parenthesis).unwrap(),
-                None => false,
-            },
+            ')' | ']' | '}' => stack.pop().map_or(false, |opening_parenthesis| {
+                ch == *matching_parentheses
+                    .get(&opening_parenthesis)
+                    .expect("Only opening parentheses are being pushed on to the stack which are the keys of the HashMap")
+            }),
             _ => true,
         } {
             return false;

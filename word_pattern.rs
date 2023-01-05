@@ -15,7 +15,12 @@ fn generate_pattern(
     s: Box<dyn Iterator<Item = String>>,
     dictionary: HashMap<String, usize>,
 ) -> Vec<usize> {
-    s.map(|word| *dictionary.get(&word).unwrap()).collect()
+    s.map(|word| {
+        *dictionary
+            .get(&word)
+            .expect("All the words in s has been pushed to dictionary in generate_dictionary")
+    })
+    .collect()
 }
 
 fn generate_dictionary(s: Box<dyn Iterator<Item = String>>) -> HashMap<String, usize> {

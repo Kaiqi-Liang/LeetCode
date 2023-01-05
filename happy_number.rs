@@ -7,7 +7,7 @@ pub fn is_happy(mut n: i32) -> bool {
         n = n
             .to_string()
             .chars()
-            .map(|ch| ch.to_digit(10).unwrap())
+            .map(|ch| ch.to_digit(10).expect("ch is converted from an i32"))
             .fold(0, |acc, digit| acc + digit.pow(2) as i32);
         if n == 1 {
             break true;

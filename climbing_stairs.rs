@@ -1,14 +1,13 @@
 //! <https://leetcode.com/problems/climbing-stairs/>
 /// `O(n)` space complexity
 mod array {
-    use std::convert::TryInto;
     pub fn climb_stairs(n: i32) -> i32 {
-        let n: usize = n.try_into().unwrap();
+        let n: usize = n as _;
         let mut opt = vec![1; n + 1];
         for i in (0..n - 1).rev() {
             opt[i] = opt[i + 1] + opt[i + 2];
         }
-        *opt.first().unwrap()
+        *opt.first().expect("opt.len() >= 1")
     }
 }
 

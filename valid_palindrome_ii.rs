@@ -16,7 +16,7 @@ pub fn valid_palindrome(s: String) -> bool {
     if i == -1 {
         true
     } else {
-        let i: usize = i.try_into().unwrap();
+        let i: usize = i as _;
         check_palindrome(s.as_bytes(), i, s.len() - i - 2) == -1
             || check_palindrome(s.as_bytes(), i + 1, s.len() - i - 1) == -1
     }

@@ -4,8 +4,10 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut map = HashMap::new();
     for (i, num) in nums.into_iter().enumerate() {
         let key = target - num;
-        if map.contains_key(&key) && i != *map.get(&key).unwrap() {
-            return vec![*map.get(&key).unwrap() as _, i as _]
+        if let Some(&index) = map.get(&key) {
+            if i != index {
+                return vec![index as _, i as _];
+            }
         }
         map.insert(num, i);
     }

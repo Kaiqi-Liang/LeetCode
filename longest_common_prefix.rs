@@ -1,11 +1,11 @@
 //! <https://leetcode.com/problems/longest-common-prefix/>
 pub fn longest_common_prefix(strs: Vec<String>) -> String {
-    let len = strs.iter().map(|s| s.len()).min().unwrap();
+    let len = strs.iter().map(|s| s.len()).min().expect("strs.len() >= 1"); // length of the shortest string
     let mut res = String::new();
     for index in 0..len {
         let curr = strs[0].chars().nth(index);
         if strs.iter().all(|s| s.chars().nth(index) == curr) {
-            res.push(curr.unwrap());
+            res.push(curr.expect("index < len"));
         } else {
             break;
         }

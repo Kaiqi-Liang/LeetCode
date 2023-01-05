@@ -4,7 +4,7 @@ pub fn length_of_last_word(s: String) -> usize {
         .split(' ')
         .collect::<Vec<&str>>()
         .last()
-        .unwrap()
+        .expect("s.len() >= 1")
         .len()
 }
 
