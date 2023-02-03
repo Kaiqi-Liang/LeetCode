@@ -33,4 +33,9 @@ function sortedArrayToBST(nums: number[]): TreeNode | null {
     return tree;
 }
 
-console.log(sortedArrayToBST([1, 2, 3, 4]));
+console.assert(JSON.stringify(sortedArrayToBST([1, 2, 3, 4]))
+    === JSON.stringify({
+        val: 2,
+        left: { val: 1, left: null, right: null },
+        right: { val: 3, left: null, right: { val: 4, left: null, right: null } }
+    }));
