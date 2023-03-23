@@ -59,18 +59,18 @@ mod ternary_search {
 fn main() {
     assert_eq!(
         binary_search::guess_number(10, 6),
-        ternary_search::guess_number(10, 6)
+        ternary_search::guess_number(10, 6),
     );
     assert_eq!(
         binary_search::guess_number(1, 1),
-        ternary_search::guess_number(1, 1)
+        ternary_search::guess_number(1, 1),
     );
     assert_eq!(
         binary_search::guess_number(2, 1),
-        ternary_search::guess_number(2, 1)
+        ternary_search::guess_number(2, 1),
     );
     assert_eq!(
         binary_search::guess_number(11702766719, 2126753390),
-        ternary_search::guess_number(11702766719, 2126753390)
+        ternary_search::guess_number(11702766719, 2126753390),
     );
 }

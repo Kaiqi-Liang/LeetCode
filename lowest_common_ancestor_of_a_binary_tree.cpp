@@ -1,5 +1,5 @@
 /**
- * @file lowest_common_ancestorofa_binary_tree.cpp
+ * @file lowest_common_ancestor_of_a_binary_tree.cpp
  * @brief https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
  * @date 2023-03-14
  */
