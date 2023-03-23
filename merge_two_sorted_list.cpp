@@ -20,11 +20,16 @@ struct ListNode {
 	, next(next) {}
 };
 
-ListNode* insert(ListNode* list, ListNode* curr, int x) {
+ListNode* insert(ListNode** list, ListNode* curr, int x) {
 	ListNode* newNode = new ListNode(x);
-	if (not list) return newNode;
-	curr->next = newNode;
-	return list;
+	if (*list == nullptr) {
+		*list = newNode;
+		return newNode;
+	} else {
+		curr->next = newNode;
+		curr = curr->next;
+		return curr;
+	}
 }
 
 ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
@@ -33,24 +38,20 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	ListNode* list3 = nullptr;
 	ListNode* curr3 = list3;
 	while (curr1 and curr2) {
-		if (curr1->val > curr2->val) {
-			list3 = insert(list3, curr3, curr2->val);
-			curr3 = curr3->next;
-			curr2 = curr2->next;
-		} else {
-			list3 = insert(list3, curr3, curr1->val);
-			curr3 = curr3->next;
+		if (curr1->val < curr2->val) {
+			curr3 = insert(&list3, curr3, curr1->val);
 			curr1 = curr1->next;
+		} else {
+			curr3 = insert(&list3, curr3, curr2->val);
+			curr2 = curr2->next;
 		}
 	}
 	while (curr1) {
-		list3 = insert(list3, curr3, curr1->val);
-		curr3 = curr3->next;
+		curr3 = insert(&list3, curr3, curr1->val);
 		curr1 = curr1->next;
 	}
 	while (curr2) {
-		list3 = insert(list3, curr3, curr2->val);
-		curr3 = curr3->next;
+		curr3 = insert(&list3, curr3, curr2->val);
 		curr2 = curr2->next;
 	}
 	return list3;
