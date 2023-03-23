@@ -1,6 +1,6 @@
 //! <https://leetcode.com/problems/merge-two-sorted-lists/>
-// Definition for singly-linked list.
 use std::cmp;
+// Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
     pub val: i32,
