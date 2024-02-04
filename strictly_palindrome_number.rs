@@ -1,4 +1,4 @@
-//! <https://leetcode.com/problems/strictly-palindrome-number/>
+//! <https://leetcode.com/problems/strictly-palindromic-number/>
 pub fn is_strictly_palindromic(n: i32) -> bool {
     false
 }
