@@ -44,10 +44,10 @@ int ladderLength(string beginWord, string endWord, vector<string> wordList) {
 			return num_words;
 		}
 		for (auto &&neighbour : get_neighbours(curr)) {
-			if (not visited.contains(neighbour) && wordSet.contains(neighbour))
+			if (not visited.contains(neighbour) and wordSet.contains(neighbour))
 			{
-				visited.insert(neighbour);
 				q.push(neighbour);
+				visited.insert(neighbour);
 			}
 		}
 	}
