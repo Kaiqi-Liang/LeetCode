@@ -3,24 +3,13 @@
  * @brief https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
  * @date 2023-03-14
  */
-#include <unordered_set>
 #include <cassert>
+#include <unordered_set>
 #include <vector>
 
-/**
- * Definition for a binary tree node.
- */
-struct TreeNode {
-	int val;
-	TreeNode* left;
-	TreeNode* right;
-	TreeNode(int x)
-	: val(x)
-	, left(nullptr)
-	, right(nullptr) {}
-};
+#include "tree.hpp"
 
-bool dfs(TreeNode* src, TreeNode* dest, std::vector<TreeNode*>& path) {
+bool dfs(TreeNode *src, TreeNode *dest, std::vector<TreeNode *> &path) {
 	if (not src or not dest) return false;
 	if (src->val == dest->val) return true;
 	if (dfs(src->left, dest, path)) {
@@ -34,32 +23,40 @@ bool dfs(TreeNode* src, TreeNode* dest, std::vector<TreeNode*>& path) {
 	return false;
 }
 
-TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-	std::vector<TreeNode*> path_to_p;
-	std::vector<TreeNode*> path_to_q;
+TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
+	std::vector<TreeNode *> path_to_p;
+	std::vector<TreeNode *> path_to_q;
 	dfs(root, p, path_to_p);
 	dfs(root, q, path_to_q);
 	size_t i = 0;
 	std::unordered_set<int> set;
 	for (; i < std::min(path_to_p.size(), path_to_q.size()); i++) {
-		if (set.contains(path_to_p[i]->val)) { return path_to_p[i]; }
+		if (set.contains(path_to_p[i]->val)) {
+			return path_to_p[i];
+		}
 		set.insert(path_to_p[i]->val);
-		if (set.contains(path_to_q[i]->val)) { return path_to_q[i]; }
+		if (set.contains(path_to_q[i]->val)) {
+			return path_to_q[i];
+		}
 		set.insert(path_to_q[i]->val);
 	}
 	if (i == path_to_p.size()) {
 		for (size_t j = i; j < path_to_q.size(); ++j) {
-			if (set.contains(path_to_q[j]->val)) { return path_to_q[j]; }
+			if (set.contains(path_to_q[j]->val)) {
+				return path_to_q[j];
+			}
 		}
 	} else {
 		for (; i < path_to_p.size(); ++i) {
-			if (set.contains(path_to_p[i]->val)) { return path_to_p[i]; }
+			if (set.contains(path_to_p[i]->val)) {
+				return path_to_p[i];
+			}
 		}
 	}
 	return root;
 }
 
-int main(int argc, char const* argv[]) {
+int main() {
 	/*
 	1
 	|
