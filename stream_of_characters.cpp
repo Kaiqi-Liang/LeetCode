@@ -5,7 +5,6 @@
 using namespace std;
 
 struct trie {
-	char val;
 	bool is_end_word;
 	unordered_map<char, trie *> children;
 	~trie() {
@@ -28,7 +27,7 @@ public:
 				if (curr->contains(word[i])) {
 					if (i == 0) curr->at(word[i])->is_end_word = true;
 				} else {
-					curr->emplace(word[i], new trie{word[i], i == 0});
+					curr->emplace(word[i], new trie{i == 0});
 				}
 				curr = &curr->at(word[i])->children;
 			}
