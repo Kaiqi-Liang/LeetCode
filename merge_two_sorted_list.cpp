@@ -5,38 +5,14 @@
  */
 #include <iostream>
 
-// Definition for singly-linked list.
-struct ListNode {
-	int val;
-	ListNode* next;
-	ListNode()
-	: val(0)
-	, next(nullptr) {}
-	ListNode(int x)
-	: val(x)
-	, next(nullptr) {}
-	ListNode(int x, ListNode* next)
-	: val(x)
-	, next(next) {}
-};
+#include "list.hpp"
+using namespace std;
 
-ListNode* insert(ListNode** list, ListNode* curr, int x) {
-	ListNode* newNode = new ListNode(x);
-	if (*list == nullptr) {
-		*list = newNode;
-		return newNode;
-	} else {
-		curr->next = newNode;
-		curr = curr->next;
-		return curr;
-	}
-}
-
-ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-	ListNode* curr1 = list1;
-	ListNode* curr2 = list2;
-	ListNode* list3 = nullptr;
-	ListNode* curr3 = list3;
+ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
+	ListNode *curr1 = list1;
+	ListNode *curr2 = list2;
+	ListNode *list3 = nullptr;
+	ListNode *curr3 = list3;
 	while (curr1 and curr2) {
 		if (curr1->val < curr2->val) {
 			curr3 = insert(&list3, curr3, curr1->val);
@@ -65,9 +41,10 @@ int main() {
 	auto node4 = ListNode(3, &node3);
 	auto list2 = ListNode(1, &node4);
 	auto list3 = mergeTwoLists(&list1, &list2);
-	ListNode* curr = list3;
+	ListNode *curr = list3;
 	while (curr) {
-		std::cout << curr->val << '\n';
+		cout << curr->val << '\n';
 		curr = curr->next;
 	}
+	return 0;
 }
