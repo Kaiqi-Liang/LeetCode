@@ -1,3 +1,8 @@
+/**
+ * @file stream_of_characters.cpp
+ * @brief https://leetcode.com/problems/stream-of-characters/
+ * @date 2024-03-30
+ */
 #include <cassert>
 #include <string>
 #include <unordered_map>

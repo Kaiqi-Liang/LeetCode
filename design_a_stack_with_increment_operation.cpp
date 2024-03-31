@@ -1,8 +1,9 @@
 /**
- * @file design_a_stack-_ith_increment_operation.cpp
+ * @file design_a_stack_with_increment_operation.cpp
  * @brief https://leetcode.com/problems/design-a-stack-with-increment-operation/
  * @date 2022-02-12
  */
+#include <cassert>
 #include <stack>
 
 /**
@@ -14,22 +15,22 @@
  */
 class CustomStack {
 public:
-    CustomStack(int maxSize)
+	CustomStack(int maxSize)
 	: _stack{std::stack<int>{}}
 	, _maxSize{maxSize} {}
-    
-    void push(int x) {
+
+	void push(int x) {
 		if (_stack.size() < _maxSize) _stack.push(x);
-    }
-    
-    int pop() {
+	}
+
+	int pop() {
 		if (_stack.empty()) return -1;
 		auto const top = _stack.top();
-        _stack.pop();
+		_stack.pop();
 		return top;
-    }
- 
-    void increment(int k, int val) {
+	}
+
+	void increment(int k, int val) {
 		auto stack = std::stack<int>{};
 		while (not _stack.empty()) {
 			auto top = _stack.top();
@@ -41,14 +42,15 @@ public:
 			_stack.push(stack.top());
 			stack.pop();
 		}
-    }
+	}
+
 private:
 	std::stack<int> _stack;
 	int _maxSize;
 };
 
 auto main() -> int {
-	CustomStack* obj = new CustomStack(0);
+	CustomStack *obj = new CustomStack(0);
 	obj->push(1);
 	int top = obj->pop();
 	assert(top == -1);
