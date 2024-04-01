@@ -7,19 +7,6 @@
 
 #include "list.hpp"
 
-namespace in_place {
-	ListNode *reverseList(ListNode *head) {
-		ListNode *tmp = nullptr;
-		ListNode *prev = nullptr;
-		for (ListNode *curr = head; curr != nullptr; curr = tmp) {
-			tmp = curr->next;
-			curr->next = prev;
-			prev = curr;
-		}
-        return prev;
-	}
-} // namespace in_place
-
 namespace iterative {
 	ListNode *reverseList(ListNode *head) {
 		ListNode *list = nullptr;
@@ -50,7 +37,7 @@ int main() {
 	auto node1 = ListNode(4);
 	auto node2 = ListNode(2, &node1);
 	auto list1 = ListNode(1, &node2);
-	auto list2 = in_place::reverseList(&list1);
+	auto list2 = reverseList(&list1);
 	assert(list2->val == 4);
 	assert(list2->next->val == 2);
 	assert(list2->next->next->val == 1);
