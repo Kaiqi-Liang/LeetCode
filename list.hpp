@@ -22,3 +22,14 @@ ListNode *insert(ListNode **list, ListNode *curr, int x) {
 		return curr;
 	}
 }
+
+ListNode *reverseList(ListNode *head) {
+	ListNode *tmp = nullptr;
+	ListNode *prev = nullptr;
+	for (ListNode *curr = head; curr != nullptr; curr = tmp) {
+		tmp = curr->next;
+		curr->next = prev;
+		prev = curr;
+	}
+	return prev;
+}
