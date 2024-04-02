@@ -24,7 +24,7 @@ public:
 			auto &[value, iter] = cache_[key];
 			last_accessed_.erase(iter);
 			last_accessed_.push_back(key);
-            iter = prev(last_accessed_.end());
+			iter = prev(last_accessed_.end());
 			return value;
 		} else {
 			return -1;
@@ -32,17 +32,15 @@ public:
 	}
 
 	void put(int key, int value) {
-        if (cache_.contains(key)) {
-            last_accessed_.erase(cache_[key].second);
+		if (cache_.contains(key)) {
+			last_accessed_.erase(cache_[key].second);
 			cache_.erase(key);
-        } else if (cache_.size() == capacity_) {
+		} else if (cache_.size() == capacity_) {
 			cache_.erase(last_accessed_.front());
 			last_accessed_.pop_front();
 		}
 		last_accessed_.push_back(key);
-		pair<int, list<int>::iterator> val =
-		    make_pair(value, prev(last_accessed_.end()));
-		cache_.emplace(key, val);
+		cache_.emplace(key, make_pair(value, prev(last_accessed_.end())));
 	}
 };
 
