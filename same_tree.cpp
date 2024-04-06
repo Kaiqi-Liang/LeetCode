@@ -7,17 +7,6 @@
 
 #include "tree.hpp"
 
-bool isSameTree(TreeNode *p, TreeNode *q) {
-	if (p == nullptr and q == nullptr)
-		return true;
-	else if (p == nullptr or q == nullptr)
-		return false;
-	if (p->val != q->val)
-		return false;
-	else
-		return isSameTree(p->left, q->left) and isSameTree(p->right, q->right);
-}
-
 int main() {
 	TreeNode two = TreeNode(2);
 	TreeNode three = TreeNode(3);
