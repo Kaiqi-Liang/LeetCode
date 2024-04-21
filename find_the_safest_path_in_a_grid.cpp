@@ -24,9 +24,9 @@ bool is_safe(vector<vector<int>> const &dist, int safe_dist, int n) {
 		if (curr_row == n - 1 and curr_col == n - 1) {
 			return true;
 		}
-		for (auto &&[i, j] : NEIGHBOURS) {
-			int new_row = curr_row + i;
-			int new_col = curr_col + j;
+		for (auto &&[delta_row, delta_col] : NEIGHBOURS) {
+			int new_row = curr_row + delta_row;
+			int new_col = curr_col + delta_col;
 			if (new_row >= 0 and new_row < n and new_col >= 0 and
 			    new_col < n and not visited.contains({new_row, new_col}) and
 			    dist[new_row][new_col] >= safe_dist)
