@@ -4,16 +4,16 @@ class Solution {
         var maxArea = 0
         let rows = matrix.count
         let cols = matrix.first!.count
-        var dp = Array(repeating: Array(repeating: 0, count: cols), count: rows)
+        var opt = Array(repeating: Array(repeating: 0, count: cols), count: rows)
         for row in (0..<rows).reversed() {
             for col in (0..<cols).reversed() {
                 if matrix[row][col] == "1" {
                     if row == rows - 1 || col == cols - 1 {
-                        dp[row][col] = 1
+                        opt[row][col] = 1
                     } else {
-                        dp[row][col] = min(dp[row + 1][col + 1], dp[row + 1][col], dp[row][col + 1]) + 1
+                        opt[row][col] = min(opt[row + 1][col + 1], opt[row + 1][col], opt[row][col + 1]) + 1
                     }
-                    maxArea = max(maxArea, dp[row][col] * dp[row][col])
+                    maxArea = max(maxArea, opt[row][col] * opt[row][col])
                 }
             }
         }
