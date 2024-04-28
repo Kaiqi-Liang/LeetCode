@@ -17,7 +17,7 @@ int dfs(
 		depths[neighbour] = depths[node] + 1;
 		int const res =
 		    visited[neighbour] ? -1 : dfs(graph, neighbour, depths, visited);
-		depths[neighbour] = depths[node] = 0;
+		depths[neighbour] = 0;
 		return res;
 	}
 	depths[node] = 0;
@@ -35,6 +35,7 @@ int longestCycle(vector<int> const &edges) {
 		if (visited[i]) continue;
 		++depths[i];
 		max_cycle = max(max_cycle, dfs(graph, i, depths, visited));
+		depths[i] = 0;
 	}
 	return max_cycle;
 }

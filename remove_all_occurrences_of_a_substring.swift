@@ -6,7 +6,6 @@ class Solution {
             s.removeSubrange(i)
         }
         return s
- 
     }
 }
 
