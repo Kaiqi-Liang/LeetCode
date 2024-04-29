@@ -11,7 +11,6 @@
 using namespace std;
 
 namespace brute_force {
-
 	int find_tree_height(
 	    int node,
 	    vector<vector<int>> const &graph,
