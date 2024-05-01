@@ -1,11 +1,6 @@
-//! <https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/>
+//! <https://leetcode.com/problems/minimum_number_of_operations_to_make_array_xor_equal_to-k/>
 pub fn min_operations(nums: Vec<i32>, k: i32) -> i32 {
-    let mut curr = *nums.first().expect("nums.len() >= 1");
-    for num in nums.iter().skip(1) {
-        curr ^= num;
-    }
-    curr ^= k;
-    curr.count_ones() as _
+    nums.into_iter().chain([k]).fold(0, |a, c| a ^ c).count_ones() as _
 }
 
 fn main() {
