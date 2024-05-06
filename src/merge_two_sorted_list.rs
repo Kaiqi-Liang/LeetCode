@@ -1,18 +1,6 @@
 //! <https://leetcode.com/problems/merge-two-sorted-lists/>
+use crate::list::ListNode;
 use std::cmp;
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
 
 pub fn merge_two_lists(
     list1: Option<Box<ListNode>>,
@@ -63,44 +51,58 @@ pub fn merge_two_lists(
     list3
 }
 
-fn main() {
-    assert_eq!(merge_two_lists(None, None), None);
-    assert_eq!(
-        merge_two_lists(None, Some(Box::new(ListNode::new(0)))),
-        Some(Box::new(ListNode::new(0)))
-    );
-    assert_eq!(
-        merge_two_lists(
-            Some(Box::new(ListNode {
-                val: 1,
-                next: Some(Box::new(ListNode {
-                    val: 2,
-                    next: Some(Box::new(ListNode { val: 4, next: None }))
-                }))
-            })),
-            Some(Box::new(ListNode {
-                val: 1,
-                next: Some(Box::new(ListNode {
-                    val: 3,
-                    next: Some(Box::new(ListNode { val: 4, next: None }))
-                }))
-            }))
-        ),
-        Some(Box::new(ListNode {
-            val: 1,
-            next: Some(Box::new(ListNode {
-                val: 1,
-                next: Some(Box::new(ListNode {
-                    val: 2,
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn empty_lists() {
+        assert_eq!(merge_two_lists(None, None), None);
+    }
+
+    #[test]
+    fn one_list_empty() {
+        assert_eq!(
+            merge_two_lists(None, Some(Box::new(ListNode::new(0)))),
+            Some(Box::new(ListNode::new(0)))
+        );
+    }
+
+    #[test]
+    fn happy_path() {
+        assert_eq!(
+            merge_two_lists(
+                Some(Box::new(ListNode {
+                    val: 1,
+                    next: Some(Box::new(ListNode {
+                        val: 2,
+                        next: Some(Box::new(ListNode { val: 4, next: None }))
+                    }))
+                })),
+                Some(Box::new(ListNode {
+                    val: 1,
                     next: Some(Box::new(ListNode {
                         val: 3,
+                        next: Some(Box::new(ListNode { val: 4, next: None }))
+                    }))
+                }))
+            ),
+            Some(Box::new(ListNode {
+                val: 1,
+                next: Some(Box::new(ListNode {
+                    val: 1,
+                    next: Some(Box::new(ListNode {
+                        val: 2,
                         next: Some(Box::new(ListNode {
-                            val: 4,
-                            next: Some(Box::new(ListNode { val: 4, next: None }))
+                            val: 3,
+                            next: Some(Box::new(ListNode {
+                                val: 4,
+                                next: Some(Box::new(ListNode { val: 4, next: None }))
+                            }))
                         }))
                     }))
                 }))
             }))
-        }))
-    );
+        );
+    }
 }

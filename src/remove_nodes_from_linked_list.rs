@@ -42,38 +42,38 @@ mod tests {
     #[test]
     fn happy_path() {
         assert_eq!(
-            remove_nodes(Some(Box::new(ListNode::with_next(
-                5,
-                Some(Box::new(ListNode::with_next(
-                    2,
-                    Some(Box::new(ListNode::with_next(
-                        13,
-                        Some(Box::new(ListNode::with_next(
-                            3,
-                            Some(Box::new(ListNode::with_next(8, None))),
-                        ))),
-                    ))),
-                ))),
-            )))),
-            Some(Box::new(ListNode::with_next(
-                13,
-                Some(Box::new(ListNode::with_next(8, None))),
-            )))
+            remove_nodes(Some(Box::new(ListNode {
+                val: 5,
+                next: Some(Box::new(ListNode {
+                    val: 2,
+                    next: Some(Box::new(ListNode {
+                        val: 13,
+                        next: Some(Box::new(ListNode {
+                            val: 3,
+                            next: Some(Box::new(ListNode { val: 8, next: None })),
+                        })),
+                    })),
+                })),
+            }))),
+            Some(Box::new(ListNode {
+                val: 13,
+                next: Some(Box::new(ListNode { val: 8, next: None })),
+            }))
         );
     }
 
     #[test]
     fn nothing_to_remove() {
-        let expected = Some(Box::new(ListNode::with_next(
-            1,
-            Some(Box::new(ListNode::with_next(
-                1,
-                Some(Box::new(ListNode::with_next(
-                    1,
-                    Some(Box::new(ListNode::with_next(1, None))),
-                ))),
-            ))),
-        )));
+        let expected = Some(Box::new(ListNode {
+            val: 1,
+            next: Some(Box::new(ListNode {
+                val: 1,
+                next: Some(Box::new(ListNode {
+                    val: 1,
+                    next: Some(Box::new(ListNode { val: 1, next: None })),
+                })),
+            })),
+        }));
         assert_eq!(remove_nodes(expected.clone()), expected);
     }
 }
