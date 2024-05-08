@@ -45,7 +45,7 @@ pub fn merge_two_lists(
     }
     let curr = if curr1.is_some() { curr1 } else { curr2 };
     match curr3 {
-        Some(list) => (*list).next = curr,
+        Some(list) => list.next = curr,
         None => list3 = curr,
     }
     list3
