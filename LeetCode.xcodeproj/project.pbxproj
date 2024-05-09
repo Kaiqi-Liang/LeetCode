@@ -11,6 +11,7 @@
 		2B4A09612BE9BF0C00392AF4 /* list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09602BE9BF0C00392AF4 /* list.swift */; };
 		2B4A09632BE9BFEC00392AF4 /* delete_node_in_a_linked_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09622BE9BFEC00392AF4 /* delete_node_in_a_linked_list.swift */; };
 		2B4A09652BE9C1D300392AF4 /* double_a_number_represented_as_a_linked_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09642BE9C1D300392AF4 /* double_a_number_represented_as_a_linked_list.swift */; };
+		2B95F2A72BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B95F2A62BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		2B4A09602BE9BF0C00392AF4 /* list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list.swift; sourceTree = "<group>"; };
 		2B4A09622BE9BFEC00392AF4 /* delete_node_in_a_linked_list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = delete_node_in_a_linked_list.swift; sourceTree = "<group>"; };
 		2B4A09642BE9C1D300392AF4 /* double_a_number_represented_as_a_linked_list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = double_a_number_represented_as_a_linked_list.swift; sourceTree = "<group>"; };
+		2B95F2A62BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeHappinessOfSelectedChildren.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				2B4A09592BE9BDE300392AF4 /* main.swift */,
 				2B4A09622BE9BFEC00392AF4 /* delete_node_in_a_linked_list.swift */,
 				2B4A09642BE9C1D300392AF4 /* double_a_number_represented_as_a_linked_list.swift */,
+				2B95F2A62BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift */,
 				2B4A09602BE9BF0C00392AF4 /* list.swift */,
 			);
 			path = LeetCode;
@@ -132,6 +135,7 @@
 				2B4A09652BE9C1D300392AF4 /* double_a_number_represented_as_a_linked_list.swift in Sources */,
 				2B4A09632BE9BFEC00392AF4 /* delete_node_in_a_linked_list.swift in Sources */,
 				2B4A095A2BE9BDE300392AF4 /* main.swift in Sources */,
+				2B95F2A72BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift in Sources */,
 				2B4A09612BE9BF0C00392AF4 /* list.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
