@@ -1,3 +1,4 @@
 testDeleteNodeInALinkedList()
 testDoubleANumberRepresentedAsALinkedList()
 testMaximizeHappinessOfSelectedChildren()
+testKthSmallestPrimeFraction()

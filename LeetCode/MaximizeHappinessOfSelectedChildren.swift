@@ -1,4 +1,4 @@
-/// https://leetcode.com/problems/maximize-happiness-of-selected-children/
+/// https://leetcode.com/problems/k-th-smallest-prime-fraction/
 func maximumHappinessSum(_ happiness: [Int], _ k: Int) -> Int {
     return happiness.sorted().reversed().prefix(k).enumerated().reduce(0, { partialResult, value in
         partialResult + max(value.element - value.offset, 0)
