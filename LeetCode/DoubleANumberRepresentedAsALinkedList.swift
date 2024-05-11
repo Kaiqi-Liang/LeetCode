@@ -1,5 +1,5 @@
 /// https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
-fileprivate func doubleIt(_ head: ListNode?) -> ListNode? {
+func doubleIt(_ head: ListNode?) -> ListNode? {
     func recursive(_ head: ListNode, _ carry: inout Bool) -> ListNode? {
         if head.next != nil {
             head.next = recursive(head.next!, &carry)!
