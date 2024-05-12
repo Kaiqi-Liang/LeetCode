@@ -1,3 +1,4 @@
+/// https://leetcode.com/problems/k-th-smallest-prime-fraction/
 func kthSmallestPrimeFraction(_ arr: [Int], _ k: Int) -> [Int] {
     var fractions = [(Double, Int, Int)]()
     for i in 0..<arr.count {
