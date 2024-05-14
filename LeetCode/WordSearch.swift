@@ -21,8 +21,7 @@ class Solution {
                 return true
             }
             visited.insert(curr)
-            let neighbours = [Coordinate(x: 1, y: 0), Coordinate(x: 0, y: 1), Coordinate(x: -1, y: 0), Coordinate(x: 0, y: -1)]
-            for neighbour in neighbours {
+            for neighbour in NEIGHBOURS {
                 let newCell = Coordinate(x: curr.x + neighbour.x, y: curr.y + neighbour.y)
                 if newCell.x >= 0 && newCell.y >= 0 && newCell.x < board.count && newCell.y < board.first!.count && !visited.contains(newCell) {
                     if dfs(newCell, index + 1, &visited, word) {
@@ -47,26 +46,23 @@ class Solution {
     }
 }
 
-struct Coordinate: Hashable {
-    var x: Int
-    var y: Int
+func testWordSearch() {
+    assert(Solution().exist([["A","B","C","E"],
+                             ["S","F","C","S"],
+                             ["A","D","E","E"]], "ABCCED"))
+    assert(Solution().exist([["A","B","C","E"],
+                             ["S","F","C","S"],
+                             ["A","D","E","E"]], "SEE"))
+    assert(!Solution().exist([["A","B","C","E"],
+                              ["S","F","C","S"],
+                              ["A","D","E","E"]], "ABCB"))
+    assert(Solution().exist([["A","B","C","E"],
+                             ["S","F","E","S"],
+                             ["A","D","E","E"]], "ABCESEEEFS"))
+    assert(!Solution().exist([["A","A","A","A","A","A"],
+                              ["A","A","A","A","A","A"],
+                              ["A","A","A","A","A","A"],
+                              ["A","A","A","A","A","A"],
+                              ["A","A","A","A","A","A"],
+                              ["A","A","A","A","A","A"]], "AAAAAAAAAAAAAAa"))
 }
-
-assert(Solution().exist([["A","B","C","E"],
-                         ["S","F","C","S"],
-                         ["A","D","E","E"]], "ABCCED"))
-assert(Solution().exist([["A","B","C","E"],
-                         ["S","F","C","S"],
-                         ["A","D","E","E"]], "SEE"))
-assert(!Solution().exist([["A","B","C","E"],
-                          ["S","F","C","S"],
-                          ["A","D","E","E"]], "ABCB"))
-assert(Solution().exist([["A","B","C","E"],
-                         ["S","F","E","S"],
-                         ["A","D","E","E"]], "ABCESEEEFS"))
-assert(!Solution().exist([["A","A","A","A","A","A"],
-                          ["A","A","A","A","A","A"],
-                          ["A","A","A","A","A","A"],
-                          ["A","A","A","A","A","A"],
-                          ["A","A","A","A","A","A"],
-                          ["A","A","A","A","A","A"]], "AAAAAAAAAAAAAAa"))
