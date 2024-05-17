@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B288E272BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B288E262BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift */; };
+		2B288E2B2BF77CD800E49D0B /* SameTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B288E2A2BF77CD800E49D0B /* SameTree.swift */; };
 		2B4A095A2BE9BDE300392AF4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09592BE9BDE300392AF4 /* main.swift */; };
 		2B4A09612BE9BF0C00392AF4 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09602BE9BF0C00392AF4 /* ListNode.swift */; };
 		2B4A09632BE9BFEC00392AF4 /* DeleteNodeInALinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09622BE9BFEC00392AF4 /* DeleteNodeInALinkedList.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B288E262BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLeavesWithAGivenValue.swift; sourceTree = "<group>"; };
+		2B288E2A2BF77CD800E49D0B /* SameTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameTree.swift; sourceTree = "<group>"; };
 		2B4A09562BE9BDE300392AF4 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4A09592BE9BDE300392AF4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2B4A09602BE9BF0C00392AF4 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
@@ -90,7 +94,9 @@
 				2B95F2A62BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift */,
 				2B4A09602BE9BF0C00392AF4 /* ListNode.swift */,
 				2B6D293D2BF59D1A00949538 /* TreeNode.swift */,
+				2B288E2A2BF77CD800E49D0B /* SameTree.swift */,
 				2B6D29372BF2F39F00949538 /* Grid.swift */,
+				2B288E262BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -154,11 +160,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4A09652BE9C1D300392AF4 /* DoubleANumberRepresentedAsALinkedList.swift in Sources */,
+				2B288E272BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift in Sources */,
 				2BE084062BF0446700533ED3 /* LargestLocalValuesInAMatrix.swift in Sources */,
 				2B4A09632BE9BFEC00392AF4 /* DeleteNodeInALinkedList.swift in Sources */,
 				2B6D293A2BF307FA00949538 /* WordSearch.swift in Sources */,
 				2B6D293C2BF59CFB00949538 /* EvaluateBooleanBinaryTree.swift in Sources */,
 				2BE084022BED9FA800533ED3 /* K-thSmallestPrimeFraction.swift in Sources */,
+				2B288E2B2BF77CD800E49D0B /* SameTree.swift in Sources */,
 				2B6D29362BF2F2D000949538 /* PathWithMaximumGold.swift in Sources */,
 				2B4A095A2BE9BDE300392AF4 /* main.swift in Sources */,
 				2B95F2A72BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift in Sources */,
