@@ -1,4 +1,11 @@
-public class TreeNode {
+public class TreeNode: Equatable {
+    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+        if lhs.val != rhs.val {
+            return false
+        }
+        return lhs.left == rhs.left && lhs.right == rhs.right
+    }
+
     public var val: Int
     public var left: TreeNode?
     public var right: TreeNode?
