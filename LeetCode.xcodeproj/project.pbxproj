@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B288E272BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B288E262BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift */; };
 		2B288E2B2BF77CD800E49D0B /* SameTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B288E2A2BF77CD800E49D0B /* SameTree.swift */; };
+		2B2891E42BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2891E32BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift */; };
 		2B4A095A2BE9BDE300392AF4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09592BE9BDE300392AF4 /* main.swift */; };
 		2B4A09612BE9BF0C00392AF4 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09602BE9BF0C00392AF4 /* ListNode.swift */; };
 		2B4A09632BE9BFEC00392AF4 /* DeleteNodeInALinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A09622BE9BFEC00392AF4 /* DeleteNodeInALinkedList.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2B288E262BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLeavesWithAGivenValue.swift; sourceTree = "<group>"; };
 		2B288E2A2BF77CD800E49D0B /* SameTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameTree.swift; sourceTree = "<group>"; };
+		2B2891E32BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributeCoinsInBinaryTree.swift; sourceTree = "<group>"; };
 		2B4A09562BE9BDE300392AF4 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4A09592BE9BDE300392AF4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2B4A09602BE9BF0C00392AF4 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				2B6D29392BF307FA00949538 /* WordSearch.swift */,
 				2BE084052BF0446700533ED3 /* LargestLocalValuesInAMatrix.swift */,
 				2B6D293B2BF59CFB00949538 /* EvaluateBooleanBinaryTree.swift */,
+				2B2891E32BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift */,
 				2B4A09642BE9C1D300392AF4 /* DoubleANumberRepresentedAsALinkedList.swift */,
 				2B95F2A62BEC9EDB0075D590 /* MaximizeHappinessOfSelectedChildren.swift */,
 				2B4A09602BE9BF0C00392AF4 /* ListNode.swift */,
@@ -173,6 +176,7 @@
 				2B4A09612BE9BF0C00392AF4 /* ListNode.swift in Sources */,
 				2B6D29382BF2F39F00949538 /* Grid.swift in Sources */,
 				2B6D293E2BF59D1A00949538 /* TreeNode.swift in Sources */,
+				2B2891E42BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
