@@ -12,15 +12,9 @@ func subsetXORSum(_ nums: [Int]) -> Int {
         xor(Array(nums.suffix(from: 1)), &subsets, curr + [nums.first!])
     }
     xor(nums, &subsets, [])
-    var sum = 0
-    for subset in subsets {
-        var xor = subset.first!
-        for i in 1..<subset.count {
-            xor ^= subset[i]
-        }
-        sum += xor
-    }
-    return sum
+    return subsets.map { subset in
+        subset.reduce(0, ^)
+    }.reduce(0, +)
 }
 
 func testSumOfAllSubsetXORTotals() {
