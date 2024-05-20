@@ -8,7 +8,9 @@ func distributeCoins(_ root: TreeNode?) -> Int {
         moves += abs(leftExtraCoins) + abs(rightExtraCoins)
         return node.val + leftExtraCoins + rightExtraCoins - 1
     }
-    assert(dfs(root) == 0)
+    guard dfs(root) == 0 else {
+        fatalError()
+    }
     return moves
 }
 
