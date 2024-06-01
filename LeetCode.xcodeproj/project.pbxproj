@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0F8B592C0AFD3400511706 /* ScoreOfAString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F8B582C0AFD3400511706 /* ScoreOfAString.swift */; };
 		2B288E272BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B288E262BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift */; };
 		2B288E2B2BF77CD800E49D0B /* SameTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B288E2A2BF77CD800E49D0B /* SameTree.swift */; };
 		2B2891E42BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2891E32BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B0F8B582C0AFD3400511706 /* ScoreOfAString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreOfAString.swift; sourceTree = "<group>"; };
 		2B288E262BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLeavesWithAGivenValue.swift; sourceTree = "<group>"; };
 		2B288E2A2BF77CD800E49D0B /* SameTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameTree.swift; sourceTree = "<group>"; };
 		2B2891E32BFABF4300E49D0B /* DistributeCoinsInBinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributeCoinsInBinaryTree.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				2B4A09592BE9BDE300392AF4 /* main.swift */,
 				2B842D112C040ED800A47453 /* SpecialArrayWithXElementsGreaterThanOrEqualX.swift */,
 				2B2891E52BFAD4FA00E49D0B /* SumOfAllSubsetXORTotals.swift */,
+				2B0F8B582C0AFD3400511706 /* ScoreOfAString.swift */,
 				2B2891E72BFC1ECB00E49D0B /* Subsets.swift */,
 				2B4A09622BE9BFEC00392AF4 /* DeleteNodeInALinkedList.swift */,
 				2BE084012BED9FA800533ED3 /* K-thSmallestPrimeFraction.swift */,
@@ -178,6 +181,7 @@
 				2B2891E62BFAD4FA00E49D0B /* SumOfAllSubsetXORTotals.swift in Sources */,
 				2B288E272BF7776400E49D0B /* DeleteLeavesWithAGivenValue.swift in Sources */,
 				2BE084062BF0446700533ED3 /* LargestLocalValuesInAMatrix.swift in Sources */,
+				2B0F8B592C0AFD3400511706 /* ScoreOfAString.swift in Sources */,
 				2B4A09632BE9BFEC00392AF4 /* DeleteNodeInALinkedList.swift in Sources */,
 				2B2891E82BFC1ECB00E49D0B /* Subsets.swift in Sources */,
 				2B6D293A2BF307FA00949538 /* WordSearch.swift in Sources */,
