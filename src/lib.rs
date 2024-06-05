@@ -1,5 +1,6 @@
 mod append_characters_to_string_to_make_subsequence;
 mod coordinate;
+mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
 mod list;
 mod merge_two_sorted_list;
