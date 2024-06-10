@@ -4,7 +4,7 @@
  */
 
 function romanToInt(s: string): number {
-    const lookup_table = {
+    const lookup_table: Record<string, number> = {
         'I': 1,
         'V': 5,
         'X': 10,

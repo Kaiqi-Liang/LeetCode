@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "ts-node": "node_modules/.bin/ts-node",
+    "lint": "node_modules/.bin/eslint --fix"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "eslint": "^8.18.0"
