@@ -1,3 +1,4 @@
+//! <https://leetcode.com/problems/find-common-characters/>
 use std::collections::HashMap;
 
 pub fn common_chars(words: Vec<String>) -> Vec<String> {

@@ -1,3 +1,4 @@
+/// https://leetcode.com/problems/score-of-a-string/
 func scoreOfString(_ s: String) -> Int {
     var score = 0
     for i in 1..<s.count {
