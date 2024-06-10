@@ -26,7 +26,7 @@ function romanToInt(s: string): number {
         res += element;
     }
     return res;
-};
+}
 
 console.assert(romanToInt("II") == 2);
 console.assert(romanToInt("VI") == 6);
