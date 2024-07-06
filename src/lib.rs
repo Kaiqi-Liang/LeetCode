@@ -7,6 +7,7 @@ mod list;
 mod merge_two_sorted_list;
 mod minimum_cost_to_hire_k_workers;
 mod minimum_number_of_moves_to_seat_everyone;
+mod pass_the_pillow;
 mod relative_ranks;
 mod relative_sort_array;
 mod remove_nodes_from_linked_list;
