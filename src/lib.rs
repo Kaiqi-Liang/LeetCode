@@ -1,4 +1,5 @@
 mod append_characters_to_string_to_make_subsequence;
+mod average_waiting_time;
 mod coordinate;
 mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
