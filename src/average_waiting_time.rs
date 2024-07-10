@@ -5,16 +5,16 @@ pub fn average_waiting_time(customers: Vec<Vec<i32>>) -> f64 {
     let num_customers = customers.len() as f64;
     for customer in customers {
         if let [arrival, preparation_time] = customer[..] {
-			let arrival = arrival as u64;
-			let preparation_time = preparation_time as u64;
+            let arrival = arrival as u64;
+            let preparation_time = preparation_time as u64;
             if curr_time < arrival {
                 curr_time = arrival;
             }
             curr_time += preparation_time;
             wait_time += curr_time - arrival;
         } else {
-			panic!("The vector has more than 2 elements");
-		}
+            panic!("The vector has more than 2 elements");
+        }
     }
     wait_time as f64 / num_customers
 }

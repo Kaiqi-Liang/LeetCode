@@ -1,14 +1,10 @@
 //! <https://leetcode.com/problems/crawler-log-folder/>
 pub fn min_operations(logs: Vec<String>) -> i32 {
-	let mut levels = 0;
-	for log in logs {
-		match log.as_str() {
-			"./" => (),
-			"../" => levels = 0.max(levels - 1),
-			_ => levels += 1
-		}
-	}
-    levels
+    logs.into_iter().fold(0, |a, c| match c.as_str() {
+        "./" => a,
+        "../" => 0.max(a - 1),
+        _ => a + 1,
+    })
 }
 
 #[cfg(test)]
