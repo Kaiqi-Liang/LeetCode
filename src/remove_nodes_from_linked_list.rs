@@ -1,4 +1,4 @@
-//! <https://leetcode.com/problems/remove-nodes-from-linked-list/description/>
+//! <https://leetcode.com/problems/remove-nodes-from-linked-list/>
 use crate::list::ListNode;
 use std::collections::VecDeque;
 

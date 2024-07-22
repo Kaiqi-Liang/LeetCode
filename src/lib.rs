@@ -16,4 +16,5 @@ mod remove_nodes_from_linked_list;
 mod remove_nth_node_from_end_of_list;
 mod reverse_substrings_between_each_pair_of_parentheses;
 mod score_after_clipping_matrix;
+mod sort_the_people;
 mod water_bottles;
