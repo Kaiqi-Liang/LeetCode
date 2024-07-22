@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/score-after-flipping-matrix/>
+//! <https://leetcode.com/problems/score-after-flipping-matrix/>
 pub fn matrix_score(grid: Vec<Vec<i32>>) -> i32 {
     let mut grid = grid;
     for row in grid.iter_mut() {
