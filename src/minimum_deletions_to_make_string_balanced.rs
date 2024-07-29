@@ -2,7 +2,7 @@
 pub fn minimum_deletions(s: String) -> i32 {
     let mut count_a = s.chars().filter(|&ch| ch == 'a').count();
     let mut count_b = 0;
-    s.chars().fold(usize::MAX, |mut a, c| {
+    s.chars().fold(s.len(), |mut a, c| {
         if c == 'a' {
             count_a -= 1;
         }
