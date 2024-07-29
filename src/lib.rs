@@ -1,6 +1,7 @@
 mod append_characters_to_string_to_make_subsequence;
 mod average_waiting_time;
 mod coordinate;
+mod count_number_of_teams;
 mod crawler_log_folder;
 mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
