@@ -8,6 +8,7 @@ mod height_checker;
 mod list;
 mod merge_two_sorted_list;
 mod minimum_cost_to_hire_k_workers;
+mod minimum_deletions_to_make_string_balanced;
 mod minimum_number_of_moves_to_seat_everyone;
 mod pass_the_pillow;
 mod relative_ranks;
