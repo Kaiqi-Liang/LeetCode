@@ -3,6 +3,7 @@ mod average_waiting_time;
 mod coordinate;
 mod count_number_of_teams;
 mod crawler_log_folder;
+mod filling_bookcase_shelves;
 mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
 mod height_checker;
