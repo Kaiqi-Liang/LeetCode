@@ -1,3 +1,13 @@
+#[macro_export]
+macro_rules! counter {
+    ($iter:expr) => {
+        $iter.fold(HashMap::new(), |mut a, c| {
+            *a.entry(c).or_insert(0) += 1;
+            a
+        })
+    };
+}
+
 mod append_characters_to_string_to_make_subsequence;
 mod average_waiting_time;
 mod coordinate;
@@ -8,6 +18,8 @@ mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
 mod height_checker;
 mod list;
+mod longest_palindrome_by_concatenating_two_letter_words;
+mod make_two_arrays_equal_by_reversing_subarrays;
 mod merge_two_sorted_list;
 mod minimum_cost_to_hire_k_workers;
 mod minimum_deletions_to_make_string_balanced;
@@ -24,3 +36,4 @@ mod sort_array_by_increasing_frequency;
 mod sort_the_jumbled_numbers;
 mod sort_the_people;
 mod water_bottles;
+mod x_of_a_kind_in_a_deck_of_cards;

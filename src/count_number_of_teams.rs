@@ -1,4 +1,4 @@
-/// <https://leetcode.com/problems/count-number-of-teams/>
+//! <https://leetcode.com/problems/count-number-of-teams/>
 pub fn num_teams(rating: Vec<i32>) -> i32 {
     (1..rating.len() - 1).fold(0, |count, i| {
         let less_than_left = (0..i).fold(0, |a, j| if rating[j] < rating[i] { a + 1 } else { a });

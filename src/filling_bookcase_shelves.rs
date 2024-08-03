@@ -1,4 +1,4 @@
-/// <https://leetcode.com/problems/filling-bookcase-shelves/>
+//! <https://leetcode.com/problems/filling-bookcase-shelves/>
 pub fn min_height_shelves(books: Vec<Vec<i32>>, shelf_width: i32) -> i32 {
     let mut opt = vec![books[0][1]];
     for i in 1..books.len() {

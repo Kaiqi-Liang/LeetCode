@@ -1,13 +1,7 @@
 //! <https://leetcode.com/problems/find-common-characters/>
 use std::collections::HashMap;
-
 pub fn common_chars(words: Vec<String>) -> Vec<String> {
-    let mut words = words.into_iter().map(|word| {
-        word.chars().fold(HashMap::new(), |mut a, c| {
-            a.entry(c).and_modify(|count| *count += 1).or_insert(1);
-            a
-        })
-    });
+    let mut words = words.into_iter().map(|word| counter!(word.chars()));
     if let Some(mut first) = words.next() {
         for next in words {
             for (key, value) in first.iter_mut() {

@@ -1,4 +1,4 @@
-/// <https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/>
+//! <https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/>
 pub fn minimum_deletions(s: String) -> i32 {
     let mut count_a = s.chars().filter(|&ch| ch == 'a').count();
     let mut count_b = 0;

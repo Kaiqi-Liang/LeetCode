@@ -2,10 +2,7 @@
 use std::{cmp::Ordering, collections::HashMap};
 pub fn frequency_sort(nums: Vec<i32>) -> Vec<i32> {
     let mut sorted_nums = nums.clone();
-    let frequency = nums.into_iter().fold(HashMap::new(), |mut a, c| {
-        a.entry(c).and_modify(|num| *num += 1).or_insert(1);
-        a
-    });
+    let frequency = counter!(nums.into_iter());
     sorted_nums.sort_by(|a, b| match frequency.get(a).cmp(&frequency.get(b)) {
         Ordering::Equal => b.cmp(a),
         other => other,
