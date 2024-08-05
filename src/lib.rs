@@ -17,6 +17,7 @@ mod filling_bookcase_shelves;
 mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
 mod height_checker;
+mod kth_distinct_string_in_an_array;
 mod list;
 mod longest_palindrome_by_concatenating_two_letter_words;
 mod make_two_arrays_equal_by_reversing_subarrays;
