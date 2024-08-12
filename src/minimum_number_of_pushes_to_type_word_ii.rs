@@ -1,11 +1,15 @@
 //! <https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/>
 use std::collections::HashMap;
 pub fn minimum_pushes(word: String) -> i32 {
-    let mut counter = counter!(word.chars()).into_iter().map(|(_, count)| count).collect::<Vec<_>>();
+    let mut counter = counter!(word.chars())
+        .into_iter()
+        .map(|(_, count)| count)
+        .collect::<Vec<_>>();
     counter.sort_by(|a, b| b.cmp(a));
-	counter.into_iter().enumerate().fold(0, |acc, (i, count)| {
-		acc + (i as i32 / 8 + 1) * count
-	})
+    counter
+        .into_iter()
+        .enumerate()
+        .fold(0, |acc, (i, count)| acc + (i as i32 / 8 + 1) * count)
 }
 
 #[cfg(test)]
