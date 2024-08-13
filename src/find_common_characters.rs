@@ -25,9 +25,8 @@ pub fn common_chars(words: Vec<String>) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
-    use std::collections::HashSet;
-
     use super::*;
+    use std::collections::HashSet;
 
     #[test]
     fn duplicates() {

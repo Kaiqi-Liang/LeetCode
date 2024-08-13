@@ -10,6 +10,8 @@ macro_rules! counter {
 
 mod append_characters_to_string_to_make_subsequence;
 mod average_waiting_time;
+mod combination_sum;
+mod combination_sum_ii;
 mod coordinate;
 mod count_number_of_teams;
 mod crawler_log_folder;
