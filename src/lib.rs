@@ -21,6 +21,7 @@ mod find_the_safest_path_in_a_grid;
 mod height_checker;
 mod kth_distinct_string_in_an_array;
 mod kth_largest_element_in_a_stream;
+mod lemonad_change;
 mod list;
 mod longest_palindrome_by_concatenating_two_letter_words;
 mod make_two_arrays_equal_by_reversing_subarrays;
