@@ -5,7 +5,7 @@ macro_rules! make_change {
         if $change >= $note {
             if let Some(amount) = $changes.get_mut(&$note) {
                 if *amount == 0 {
-					$changes.remove(&$note);
+                    $changes.remove(&$note);
                     false
                 } else {
                     *amount -= 1;
