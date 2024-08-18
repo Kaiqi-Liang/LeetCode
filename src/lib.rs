@@ -25,6 +25,7 @@ mod lemonad_change;
 mod list;
 mod longest_palindrome_by_concatenating_two_letter_words;
 mod make_two_arrays_equal_by_reversing_subarrays;
+mod maximum_distance_in_arrays;
 mod merge_two_sorted_list;
 mod minimum_cost_to_hire_k_workers;
 mod minimum_deletions_to_make_string_balanced;
