@@ -42,5 +42,6 @@ mod score_after_clipping_matrix;
 mod sort_array_by_increasing_frequency;
 mod sort_the_jumbled_numbers;
 mod sort_the_people;
+mod two_keys_keyboard;
 mod water_bottles;
 mod x_of_a_kind_in_a_deck_of_cards;
