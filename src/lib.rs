@@ -10,6 +10,7 @@ macro_rules! counter {
 
 mod append_characters_to_string_to_make_subsequence;
 mod average_waiting_time;
+mod binary_tree_postorder_traversal;
 mod combination_sum;
 mod combination_sum_ii;
 mod complement_of_base_10_integer;
@@ -45,5 +46,6 @@ mod sort_array_by_increasing_frequency;
 mod sort_the_jumbled_numbers;
 mod sort_the_people;
 mod two_keys_keyboard;
+mod tree;
 mod water_bottles;
 mod x_of_a_kind_in_a_deck_of_cards;
