@@ -25,12 +25,12 @@ mod tests {
 
     #[test]
     fn zero() {
-        assert_eq!(bitwise_complement(0), 0);
+        assert_eq!(bitwise_complement(0), 1);
     }
 
     #[test]
     fn one() {
-        assert_eq!(bitwise_complement(1), 1);
+        assert_eq!(bitwise_complement(1), 0);
     }
 
     #[test]
