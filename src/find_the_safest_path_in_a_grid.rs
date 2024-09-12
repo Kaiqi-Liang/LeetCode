@@ -1,7 +1,6 @@
 //! <https://leetcode.com/problems/find-the-safest-path-in-a-grid/>
 use crate::coordinate::Coordinate;
 use std::collections::{BinaryHeap, HashSet, VecDeque};
-
 pub fn maximum_safeness_factor(grid: Vec<Vec<i32>>) -> i32 {
     let mut dist = vec![vec![0; grid[0].len()]; grid.len()];
     let theives = grid
@@ -61,7 +60,7 @@ mod tests {
     fn no_path() {
         assert_eq!(
             maximum_safeness_factor(vec![vec![1, 0, 0], vec![0, 0, 0], vec![0, 0, 1]]),
-            0
+            0,
         );
     }
 
@@ -69,7 +68,7 @@ mod tests {
     fn happy_path() {
         assert_eq!(
             maximum_safeness_factor(vec![vec![0, 0, 1], vec![0, 0, 0], vec![0, 0, 0]]),
-            2
+            2,
         );
     }
 }
