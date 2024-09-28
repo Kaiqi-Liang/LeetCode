@@ -19,6 +19,7 @@ mod coordinate;
 mod count_number_of_teams;
 mod count_the_number_of_consistent_strings;
 mod crawler_log_folder;
+mod design_circular_deque;
 mod filling_bookcase_shelves;
 mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
