@@ -15,6 +15,8 @@ pub fn uncommon_from_sentences(s1: String, s2: String) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
+    use std::collections::HashSet;
+
     use super::*;
 
     #[test]
@@ -23,8 +25,10 @@ mod tests {
             uncommon_from_sentences(
                 String::from("this apple is sweet"),
                 String::from("this apple is sour"),
-            ),
-            vec![String::from("sweet"), String::from("sour")],
+            )
+            .into_iter()
+            .collect::<HashSet<_>>(),
+            HashSet::from([String::from("sweet"), String::from("sour")]),
         );
     }
 
