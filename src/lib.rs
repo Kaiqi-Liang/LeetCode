@@ -41,6 +41,7 @@ mod my_calendar_i;
 mod number_complement;
 mod number_of_senior_citizens;
 mod pass_the_pillow;
+mod rank_transform_of_an_array;
 mod relative_ranks;
 mod relative_sort_array;
 mod remove_nodes_from_linked_list;
