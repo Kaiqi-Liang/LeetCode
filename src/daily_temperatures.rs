@@ -67,6 +67,27 @@ mod backwards {
     }
 }
 
+/// `O(n)` time complexity
+mod monotonic_stack {
+    use std::collections::VecDeque;
+    pub fn daily_temperatures(temperatures: Vec<i32>) -> Vec<i32> {
+        let mut stack: VecDeque<(usize, i32)> = VecDeque::new();
+        let mut res = vec![0; temperatures.len()];
+        for (curr_index, curr_temp) in temperatures.into_iter().enumerate() {
+            while let Some(&(prev_index, prev_temp)) = stack.back() {
+                if curr_temp > prev_temp {
+                    stack.pop_back();
+                    res[prev_index] = (curr_index - prev_index) as i32;
+                } else {
+                    break;
+                }
+            }
+            stack.push_back((curr_index, curr_temp));
+        }
+        res
+    }
+}
+
 #[cfg(test)]
 mod test {
     use super::*;
@@ -139,6 +160,30 @@ mod test {
         );
         assert_eq!(
             backwards::daily_temperatures(vec![33, 32, 31]),
+            vec![0, 0, 0],
+        );
+    }
+
+    #[test]
+    fn monotonic_stack() {
+        assert_eq!(
+            monotonic_stack::daily_temperatures(vec![95, 99, 95, 93, 96, 100, 97]),
+            vec![1, 4, 2, 1, 1, 0, 0],
+        );
+        assert_eq!(
+            monotonic_stack::daily_temperatures(vec![73, 74, 75, 71, 69, 72, 76, 73]),
+            vec![1, 1, 4, 2, 1, 1, 0, 0],
+        );
+        assert_eq!(
+            monotonic_stack::daily_temperatures(vec![30, 40, 50, 60]),
+            vec![1, 1, 1, 0],
+        );
+        assert_eq!(
+            monotonic_stack::daily_temperatures(vec![30, 60, 90]),
+            vec![1, 1, 0],
+        );
+        assert_eq!(
+            monotonic_stack::daily_temperatures(vec![33, 32, 31]),
             vec![0, 0, 0],
         );
     }
