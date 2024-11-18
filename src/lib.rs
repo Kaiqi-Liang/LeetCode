@@ -20,6 +20,7 @@ mod count_number_of_teams;
 mod count_the_number_of_consistent_strings;
 mod crawler_log_folder;
 mod daily_temperatures;
+mod defuse_the_bomb;
 mod design_circular_deque;
 mod divide_players_into_teams_of_equal_skill;
 mod filling_bookcase_shelves;
