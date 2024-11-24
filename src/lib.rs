@@ -18,6 +18,7 @@ mod convert_1d_array_into_2d_array;
 mod coordinate;
 mod count_number_of_teams;
 mod count_the_number_of_consistent_strings;
+mod count_vowel_substrings_of_a_string;
 mod crawler_log_folder;
 mod daily_temperatures;
 mod defuse_the_bomb;
