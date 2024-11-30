@@ -4,6 +4,7 @@
  * @date 2024-11-24
  */
 #include <cassert>
+
 #include "tree.hpp"
 bool calculate_sum(TreeNode *curr, int target_sum, int running_sum) {
 	if (not curr) {
