@@ -25,11 +25,7 @@ mod tests {
                 left: None,
                 right: Some(Rc::from(RefCell::from(TreeNode {
                     val: 2,
-                    left: Some(Rc::from(RefCell::from(TreeNode {
-                        val: 3,
-                        left: None,
-                        right: None,
-                    }))),
+                    left: Some(Rc::from(RefCell::from(TreeNode::new(3)))),
                     right: None,
                 }))),
             })))),
