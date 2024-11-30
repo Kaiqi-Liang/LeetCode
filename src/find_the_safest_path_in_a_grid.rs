@@ -1,5 +1,5 @@
 //! <https://leetcode.com/problems/find-the-safest-path-in-a-grid/>
-use crate::coordinate::Coordinate;
+use crate::coordinate::{Coordinate, IMMEDIATE_NEIGHBOURS};
 use std::collections::{BinaryHeap, HashSet, VecDeque};
 pub fn maximum_safeness_factor(grid: Vec<Vec<i32>>) -> i32 {
     let mut dist = vec![vec![0; grid[0].len()]; grid.len()];
@@ -22,7 +22,7 @@ pub fn maximum_safeness_factor(grid: Vec<Vec<i32>>) -> i32 {
     let mut visited: HashSet<Coordinate> = theives.into_iter().collect();
     while !q.is_empty() {
         let curr_coord = q.pop_front().expect("!q.is_empty()");
-        for new_coord in curr_coord.neighbours(grid.len(), grid.len()) {
+        for new_coord in curr_coord.neighbours(grid.len(), grid.len(), &IMMEDIATE_NEIGHBOURS) {
             if !visited.contains(&new_coord) {
                 visited.insert(new_coord);
                 dist[new_coord.x][new_coord.y] = dist[curr_coord.x][curr_coord.y] + 1;
@@ -38,7 +38,7 @@ pub fn maximum_safeness_factor(grid: Vec<Vec<i32>>) -> i32 {
         if curr_coord.x == dist.len() - 1 && curr_coord.y == dist.len() - 1 {
             return curr_min;
         }
-        for new_coord in curr_coord.neighbours(dist.len(), dist.len()) {
+        for new_coord in curr_coord.neighbours(dist.len(), dist.len(), &IMMEDIATE_NEIGHBOURS) {
             if !visited.contains(&new_coord) {
                 visited.insert(new_coord);
                 priority_queue.push((
