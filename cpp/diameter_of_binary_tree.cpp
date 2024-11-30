@@ -31,4 +31,5 @@ int main() {
 	TreeNode two(2, &four, &five);
 	TreeNode one(1, &two, &three);
 	assert(diameterOfBinaryTree(&one) == 3);
+	return 0;
 }
