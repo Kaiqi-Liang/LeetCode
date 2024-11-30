@@ -28,6 +28,7 @@ mod divide_players_into_teams_of_equal_skill;
 mod filling_bookcase_shelves;
 mod find_common_characters;
 mod find_the_safest_path_in_a_grid;
+mod greatest_common_divisor_of_strings;
 mod height_checker;
 mod kth_distinct_string_in_an_array;
 mod kth_largest_element_in_a_stream;
