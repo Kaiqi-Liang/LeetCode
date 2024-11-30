@@ -17,6 +17,7 @@ mod complement_of_base_10_integer;
 mod convert_1d_array_into_2d_array;
 mod coordinate;
 mod count_number_of_teams;
+mod count_symmetric_integers;
 mod count_the_number_of_consistent_strings;
 mod count_vowel_substrings_of_a_string;
 mod crawler_log_folder;
