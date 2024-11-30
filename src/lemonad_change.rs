@@ -20,6 +20,7 @@ macro_rules! make_change {
         }
     };
 }
+
 pub fn lemonade_change(bills: Vec<i32>) -> bool {
     let mut changes = HashMap::new();
     for bill in bills {
