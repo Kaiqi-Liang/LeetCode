@@ -77,5 +77,8 @@ mod tests {
         assert!(deque.delete_last());
         assert!(deque.insert_front(4));
         assert_eq!(deque.get_front(), 4);
+        assert!(deque.is_full());
+        assert!(deque.delete_front());
+        assert!(!deque.is_full());
     }
 }
