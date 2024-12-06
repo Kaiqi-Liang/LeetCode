@@ -101,6 +101,8 @@ mod relative_ranks;
 #[cfg(test)]
 mod relative_sort_array;
 #[cfg(test)]
+mod remove_element;
+#[cfg(test)]
 mod remove_nodes_from_linked_list;
 #[cfg(test)]
 mod remove_nth_node_from_end_of_list;
