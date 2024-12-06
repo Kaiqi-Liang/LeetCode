@@ -15,6 +15,8 @@ mod average_waiting_time;
 #[cfg(test)]
 mod binary_tree_postorder_traversal;
 #[cfg(test)]
+mod check_if_a_word_occurs_as_a_prefix_of_any_word_in_a_sentence;
+#[cfg(test)]
 mod check_if_n_and_its_double_exist;
 #[cfg(test)]
 mod combination_sum;
