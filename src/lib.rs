@@ -121,6 +121,8 @@ mod sort_the_jumbled_numbers;
 #[cfg(test)]
 mod sort_the_people;
 #[cfg(test)]
+mod take_gifts_from_the_richest_pile;
+#[cfg(test)]
 mod tree;
 #[cfg(test)]
 mod two_keys_keyboard;

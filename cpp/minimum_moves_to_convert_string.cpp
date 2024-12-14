@@ -5,8 +5,7 @@
  */
 #include <cassert>
 #include <string>
-using namespace std;
-size_t minimumMoves(string s) {
+size_t minimumMoves(std::string s) {
 	size_t count = 0;
 	for (size_t index = 0; index < s.length(); ++index) {
 		if (s[index] == 'X') {
