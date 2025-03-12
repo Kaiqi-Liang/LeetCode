@@ -1,6 +1,8 @@
 """
 https://leetcode.com/problems/is-subsequence/
 """
+
+
 def is_subsequence(s: str, t: str) -> bool:
     if not s:
         return True
