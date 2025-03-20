@@ -14,7 +14,9 @@ impl KthLargest {
         } else if nums.len() == k - 1 {
             0
         } else {
-            panic!("It is guaranteed that there will be at least k elements in the array when you search for the kth element.")
+            panic!(
+                "It is guaranteed that there will be at least k elements in the array when you search for the kth element."
+            )
         };
         let nums = nums.into_iter().map(Reverse).collect::<BinaryHeap<_>>();
         Self {

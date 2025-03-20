@@ -27,11 +27,7 @@ pub fn shortest_subarray(nums: Vec<i32>, k: i32) -> i32 {
         }
         stack.push_back((curr_index, curr_sum));
     }
-    if res == i32::MAX {
-        -1
-    } else {
-        res
-    }
+    if res == i32::MAX { -1 } else { res }
 }
 
 #[cfg(test)]
