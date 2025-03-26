@@ -19,6 +19,6 @@ def lengthOfLongestSubstring(s: str) -> int:
     return max_length
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert lengthOfLongestSubstring("tmmzuxt") == 5
     assert lengthOfLongestSubstring("abcabcbb") == 3

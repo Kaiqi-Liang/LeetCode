@@ -16,11 +16,14 @@ def can_player_1_force_win(n: int, target: int) -> bool:
             if option >= difference:
                 cache[key] = True
                 return True
-            if not determine_win(tuple(o for o in options if o != option), difference - option):
+            if not determine_win(
+                tuple(o for o in options if o != option), difference - option
+            ):
                 is_won = True
                 break
         cache[key] = is_won
         return is_won
+
     return determine_win(options, target)
 
 

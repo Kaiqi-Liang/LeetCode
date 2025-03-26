@@ -33,7 +33,16 @@ def letterCombinations(digits: str) -> list[str]:
 
 
 if __name__ == "__main__":
-    assert letterCombinations(
-        "23") == ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+    assert letterCombinations("23") == [
+        "ad",
+        "ae",
+        "af",
+        "bd",
+        "be",
+        "bf",
+        "cd",
+        "ce",
+        "cf",
+    ]
     assert letterCombinations("") == []
     assert letterCombinations("2") == ["a", "b", "c"]

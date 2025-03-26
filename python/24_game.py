@@ -1,6 +1,7 @@
 """
 https://leetcode.com/problems/24-game/
 """
+
 from itertools import combinations
 from operator import add, sub, mul, truediv
 
