@@ -1,5 +1,6 @@
 #pragma once
 #include <cassert>
+#include <iterator>
 #include <unordered_set>
 #include <vector>
 using namespace std;
@@ -22,7 +23,7 @@ struct TreeNode {
 	, right(right) {}
 };
 
-bool isSameTree(TreeNode *p, TreeNode *q) {
+inline bool isSameTree(TreeNode *p, TreeNode *q) {
 	if (p == nullptr and q == nullptr)
 		return true;
 	else if (p == nullptr or q == nullptr)
@@ -33,7 +34,7 @@ bool isSameTree(TreeNode *p, TreeNode *q) {
 		return isSameTree(p->left, q->left) and isSameTree(p->right, q->right);
 }
 
-vector<TreeNode *> get_path(TreeNode *node, int dest) {
+inline vector<TreeNode *> get_path(TreeNode *node, int dest) {
 	if (not node) return {};
 	if (node->val == dest) return {node};
 	for (TreeNode *child : {node->left, node->right}) {
@@ -46,7 +47,7 @@ vector<TreeNode *> get_path(TreeNode *node, int dest) {
 	return {};
 }
 
-TreeNode *lowestCommonAncestor(TreeNode *root, int p, int q) {
+inline TreeNode *lowestCommonAncestor(TreeNode *root, int p, int q) {
 	vector<TreeNode *> path_to_start = get_path(root, p);
 	vector<TreeNode *> path_to_dest = get_path(root, q);
 	assert(path_to_start.front()->val == p);

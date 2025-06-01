@@ -1,3 +1,4 @@
+#pragma once
 struct ListNode {
 	int val;
 	ListNode *next;
@@ -12,7 +13,7 @@ struct ListNode {
 	, next(next) {}
 };
 
-ListNode *insert(ListNode **list, ListNode *curr, int x) {
+inline ListNode *insert(ListNode **list, ListNode *curr, int x) {
 	ListNode *newNode = new ListNode(x);
 	if (*list == nullptr) {
 		return *list = newNode;
@@ -23,7 +24,7 @@ ListNode *insert(ListNode **list, ListNode *curr, int x) {
 	}
 }
 
-ListNode *reverseList(ListNode *head) {
+inline ListNode *reverseList(ListNode *head) {
 	ListNode *tmp = nullptr;
 	ListNode *prev = nullptr;
 	for (ListNode *curr = head; curr != nullptr; curr = tmp) {
